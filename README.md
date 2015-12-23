@@ -1,0 +1,1 @@
+A community for theme park enthusiasts to share news, rumors, and discuss the industry

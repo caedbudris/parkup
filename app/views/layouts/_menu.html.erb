@@ -1,0 +1,64 @@
+<div class="menu">
+    <div class="top">
+        <div class='logo'><h2>Parkup</h2></div>
+        <div class="click">
+            <div class="open"><ul><li></li><li></li><li></li></ul></div>
+            <div class="exit">X</div>    
+        </div>
+    </div>
+    <div class="dropdown">
+        <ul>
+            <li class='inactive'><%= link_to 'News', '#' %></li>
+            <li class='inactive'><%= link_to 'Rumors', '#' %></li>
+            <li class='inactive'><%= link_to 'Discussion', '#' %></li>
+            <li class='inactive'><%= link_to 'Podcasts', '#' %></li>
+            <li class='inactive'><%= link_to 'Blogs', '#' %></li>
+            <li class='inactive'><%= link_to 'Forum', '#' %></li>
+        </ul>
+    </div>
+</div>
+<div class="bottom">
+    <div class="contain">
+        <%= link_to 'Log In', '#', class: 'log' %>
+        <%= link_to 'Sign Up', '#', class: 'sign' %>
+        <%= link_to '+', '#', class:'postSmall' %>
+        <%= link_to '+ New Post', '#', class: 'post' %>
+    </div>
+</div>
+
+<script>
+    
+    $dropdown = $('.dropdown');
+    $open = $('.open');
+    $close = $('.exit');
+    $bottom = $('.bottom');
+    $window = $(window);
+    
+    $open.on('click', function() {
+        $dropdown.slideDown(200);
+        $open.hide();
+        $close.show();
+        $bottom.hide();
+    })
+    
+    $close.on('click', function() {
+        $dropdown.slideUp(200);
+        $close.hide();
+        $open.show();
+        $bottom.show();
+    })
+    
+    $window.on('resize', function() {
+        if($window.width() > 765) {
+            $dropdown.show();
+            $close.hide();
+            $open.hide();
+            $bottom.show();
+        }
+        else {
+            $dropdown.hide();
+            $open.show();
+        }
+    })
+    
+</script>
