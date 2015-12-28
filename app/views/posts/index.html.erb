@@ -1,0 +1,13 @@
+<%= provide :title, 'All' %>
+<div class='posts'>
+    <h1>All</h1>
+    <div class="container">
+        <ul>
+        <% @posts.each do |post| %>
+            <li>
+                <%= render post %>
+            </li>
+        <% end %>
+        </ul>
+    </div>
+</div>

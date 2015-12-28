@@ -1,0 +1,19 @@
+<%= provide :title, @post.title %>
+<div class="full_post">    
+    <div class="container">
+    <h1><%= link_to @post.title, @post.link %></h1><h3><%= @post.rating %></h3>
+        <div class="content">
+            <%= link_to 'Edit', edit_post_path, class: 'edit' %>
+            <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'You sure?' }, class: 'delete'  %>
+            <p><%= @post.content %></p>
+        </div>
+        <div class='comments'>
+            <h3>Comments</h3>
+            <ul>
+                <li>
+                    <p>I don't think this will be a good thing for seaworld. They don't need to spend more money.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

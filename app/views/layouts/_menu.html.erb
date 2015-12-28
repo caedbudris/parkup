@@ -8,9 +8,10 @@
     </div>
     <div class="dropdown">
         <ul>
-            <li class='inactive'><%= link_to 'News', '#' %></li>
-            <li class='inactive'><%= link_to 'Rumors', '#' %></li>
-            <li class='inactive'><%= link_to 'Discussion', '#' %></li>
+            <li class='inactive'><%= link_to 'All', root_path %></li>
+            <li class='inactive'><%= link_to 'News', news_path %></li>
+            <li class='inactive'><%= link_to 'Rumors', rumors_path %></li>
+            <li class='inactive'><%= link_to 'Discussion', discussion_path %></li>
             <li class='inactive'><%= link_to 'Podcasts', '#' %></li>
             <li class='inactive'><%= link_to 'Blogs', '#' %></li>
             <li class='inactive'><%= link_to 'Forum', '#' %></li>
@@ -21,8 +22,8 @@
     <div class="contain">
         <%= link_to 'Log In', '#', class: 'log' %>
         <%= link_to 'Sign Up', '#', class: 'sign' %>
-        <%= link_to '+', '#', class:'postSmall' %>
-        <%= link_to '+ New Post', '#', class: 'post' %>
+        <%= link_to '+', new_post_path, class:'postSmall' %>
+        <%= link_to '+ New Post', new_post_path, class: 'post' %>
     </div>
 </div>
 

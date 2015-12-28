@@ -1,11 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  link: MyString
-  content: MyText
-
-two:
-  title: MyString
-  link: MyString
-  content: MyText
+  title: 'example post'
+  link: 'http://www.example.com/'
+  content: 'Some content'
+  rating: 1
+  category: 'news'
