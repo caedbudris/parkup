@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/rumors', to: 'posts#rumors'
   
   get '/discussion', to: 'posts#discussion'
+  
+  resources :comments
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -3,6 +3,7 @@ html, body {
     padding:0;
 }
 
+/*variables */
 $blue:#3366ff;
 $darkblue:#0039e6;
 $lightblue: #3399ff;
@@ -13,6 +14,7 @@ $lightpurple: #6600ff;
 $font1: 'Muli', sans-serif;
 $font2: 'Paytone One', sans-serif;
 
+/*menu */
 .menu {
     position:fixed;
     .top {
@@ -146,7 +148,7 @@ $font2: 'Paytone One', sans-serif;
     }
 }
 
-/* multiple posts */
+/* post feeds (index, news, discussion, rumors) */
 .posts {
     width:100%;
     font-family:$font1;
@@ -161,7 +163,7 @@ $font2: 'Paytone One', sans-serif;
 
 
 /*post partial */
-.post {
+._post {
     h2 {
         a {
             text-decoration:none;
@@ -182,32 +184,19 @@ $font2: 'Paytone One', sans-serif;
     }
     p {
         display:inline;
-        padding:50px;
+        margin:0px 20px 0px 20px;
     }
     .content {
         display:inline-block;
         width: calc(100% - 80px);
-    }
-    
-    .rate {
-        display:inline-block;
-        width:70px;
-        .ratefield {
-            display:none;
-        }
-        h3 {
-            text-align:center;
-        }
     }
 }
 
 /* form */ 
 .form {
     font-family:$font1;
-    .container {
-        margin:0 auto;
-        max-width:400px;
-    }
+    width:100%;
+    margin:0 auto;
     h1 {
         margin-top:0;
         text-align:center;
@@ -227,16 +216,16 @@ $font2: 'Paytone One', sans-serif;
     input, textarea, select {
         font-size:20px;
         outline:none;
-        border:2px $lightblue solid;
-        &:hover {
+        border:2px $blue solid;
+        &:hover, &:focus {
             border:2px $darkblue solid;
         }
     }
     input, textarea {
-        width:330px;
+        width:95%;
     }
     textarea {
-        height:200px;
+        height:100px;
     }
     input[type="submit"] {
         background-color:$darkred;
@@ -255,14 +244,88 @@ $font2: 'Paytone One', sans-serif;
         }
     }
     
-    .ratefield {
-        display:none;
-    }
+}
+
+.ratefield {
+    display:none;
 }
 
 .container {
     margin:0 auto;
     max-width:800px;
+}
+
+
+/* show post */
+.post {
+    font-family:$font1;
+    a {
+        text-decoration:none;
+        color:$darkred;
+        &:hover {
+            color:#7e1b1b;
+        }
+    }
+    h1 {
+        margin-top:0;
+        text-align:center;
+    }
+    .title {
+        display:inline-block;
+        width: calc(100% - 80px);
+    }
+    
+    .content {
+        font-size:20px;
+        padding:10px;
+        border:2px $blue solid;
+        border-radius:10px;
+        .edit {
+            float:right;
+            color:#00cc99;
+            font-weight:bold;
+        }
+    }
+    .comments {
+        ul {
+            list-style-type:none;
+            padding:0;
+        }
+    }
+}
+
+/* upvote button */
+.rate {
+    display:inline-block;
+    width:70px;
+    text-align:center;
+    .ratefield {
+        display:none;
+    }
+    input[type='submit'] {
+       width: 0; 
+	   height: 0; 
+	   border-top: 0;
+	   border-left: 20px solid white;
+	   border-right: 20px solid white;
+	   border-bottom: 20px solid #bfbfbf;
+	   padding:0;
+	   &:hover {
+	       border-bottom: 20px solid #595959;
+	   }
+    }
+}
+
+/* comment partial */
+.comment {
+    padding:5px;
+    border:2px $blue solid;
+    border-radius:5px;
+}
+
+/* reserved class to hide elements */
+.hidden {
+    display:none;
 }
 
 /* size changes */
@@ -314,41 +377,4 @@ $font2: 'Paytone One', sans-serif;
         margin-left:250px;
     }
     
-}
-
-.full_post {
-    font-family:$font1;
-    a {
-        text-decoration:none;
-        color:$darkred;
-        &:hover {
-            color:#7e1b1b;
-        }
-    }
-    h1 {
-        margin-top:0;
-        text-align:center;
-    }
-    .content {
-        background-color:#bfbfbf;
-        font-size:20px;
-        padding:10px;
-        border:1px black solid;
-        .edit {
-            float:right;
-            color:#00cc99;
-            font-weight:bold;
-        }
-    }
-    .comments {
-        ul {
-            list-style-type:none;
-            padding:0;
-        }
-        li {
-            background-color:#bfbfbf;
-            padding:5px;
-            border:1px black solid;
-        }
-    }
 }
