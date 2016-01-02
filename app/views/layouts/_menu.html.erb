@@ -39,14 +39,12 @@
         $dropdown.slideDown(200);
         $open.hide();
         $close.show();
-        $bottom.hide();
     })
     
     $close.on('click', function() {
         $dropdown.slideUp(200);
         $close.hide();
         $open.show();
-        $bottom.show();
     })
     
     $window.on('resize', function() {
@@ -54,7 +52,6 @@
             $dropdown.show();
             $close.hide();
             $open.hide();
-            $bottom.show();
         }
         else {
             $dropdown.hide();
