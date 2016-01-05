@@ -1,0 +1,36 @@
+<%= provide :title, @user.name %>
+<div class='profile'>
+    <div class='cover'>
+        <div class='info'>
+            <img class='picture' src='<%= @user.picture %>'>
+        </div>
+    </div>
+    <div class='middle'>
+        <h3><%= @user.name %></h3>
+        <p>Home Park: <%= @user.park %></p>
+        <%= link_to 'edit', edit_user_path %> 
+    </div>
+    <div class='low'>
+        <div class='header'>    
+            <p class='left button'>Posts</p><p class='right button'>Comments</p>
+        </div>
+        <div class='p display'>Posts</div>
+        <div class='c display'>Comments</div>
+    </div>
+</div>
+
+<script>
+    $('.left').on('click', function() {
+        $('.c').hide();
+        $('.p').show();
+        $('.left').css('background-color', 'white');
+        $('.right').css('background-color', '#e6e6e6');
+    })
+    
+    $('.right').on('click', function() {
+        $('.p').hide();
+        $('.c').show();
+        $('.right').css('background-color', 'white');
+        $('.left').css('background-color', '#e6e6e6')
+    })
+</script>

@@ -1,0 +1,51 @@
+<%= provide :title, 'Sign Up' %>
+<div class='container'>
+<div class='form'>
+    <h1>Sign Up</h1>
+    <div class='errors'>
+        <% if @user.errors.full_messages.any? %>
+        <h3>Stop the lift!</h3>
+        <ul>
+        <% @user.errors.full_messages.each do |e| %>
+            <li><%= e %></li>
+        <% end %>
+        </ul>
+        <% end %>
+    </div>
+    
+    <%= form_for @user do |u| %>
+        <ul>
+            
+            <li>
+                <h3>Username</h3>
+                <%= u.text_field :name %>
+            </li>
+            
+            <li>
+                <h3>Email</h3>
+                <%= u.text_field :email %>
+            </li>
+            
+            <li>
+                <h3>Home Park</h3>
+                <%= u.text_field :park %>
+            </li>
+            
+            <li>
+                <h3>Picture</h3>
+                <%= u.file_field :picture %>
+            </li>
+            
+            <li>
+                <h3>Password</h3>
+                <%= u.password_field :password_digest %>
+            </li>
+            
+            <li>
+                <%= u.submit 'Submit' %>
+            </li>
+            
+        </ul>    
+    <% end %>
+</div>
+</div>

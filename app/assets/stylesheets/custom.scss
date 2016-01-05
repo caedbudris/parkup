@@ -1,18 +1,20 @@
-html, body {
-    margin:0;
-    padding:0;
-}
-
 /*variables */
 $blue:#3366ff;
 $darkblue:#0039e6;
 $lightblue: #3399ff;
+$lightgrey:#e6e6e6;
 $darkgrey: #333333;
 $darkred: #a82424;
 $lightpurple: #6600ff;
 
 $font1: 'Muli', sans-serif;
 $font2: 'Paytone One', sans-serif;
+
+html, body {
+    margin:0;
+    padding:0;
+    background-color:$lightgrey
+}
 
 /*menu */
 .menu {
@@ -302,12 +304,12 @@ $font2: 'Paytone One', sans-serif;
     .ratefield {
         display:none;
     }
-    input[type='submit'] {
+    input[type='submit'], input[type='file'] {
        width: 0; 
 	   height: 0; 
 	   border-top: 0;
-	   border-left: 20px solid white;
-	   border-right: 20px solid white;
+	   border-left: 20px solid $lightgrey;
+	   border-right: 20px solid $lightgrey;
 	   border-bottom: 20px solid #bfbfbf;
 	   padding:0;
 	   &:hover {
@@ -326,6 +328,60 @@ $font2: 'Paytone One', sans-serif;
 /* reserved class to hide elements */
 .hidden {
     display:none;
+}
+
+/* user profile */
+.profile {
+    .cover {
+        height:360px;
+        background-image:url('roller_coaster.jpg');
+    }
+    .info {
+        padding-top:140px;
+        text-align:center;
+        .picture {
+            height:200px;
+            width:200px;
+            border-radius:100px;
+            background-color:white;
+            margin:0 auto;
+        }
+    }
+    .middle {
+        text-align:center;
+        font-family:$font1;
+        font-size:20px;
+        color:$darkred;
+        font-weight:bold;
+    }
+    .low {
+        max-width:500px;
+        margin:0 auto;
+        font-family:$font1;
+        font-weight:bold;
+        .header {
+            overflow:auto;
+        }
+        .right {
+            float:right;
+            padding:10px;
+        }
+        .left {
+            float:left;
+            background-color:white;
+        }
+        .button {
+            padding:10px;
+            margin:0;
+        }
+        .c {
+            display:none;
+        }
+        .display {
+            background-color:white;
+            padding:10px;
+        }
+    }
 }
 
 /* size changes */
