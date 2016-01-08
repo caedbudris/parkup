@@ -1,0 +1,26 @@
+<%= provide :title, 'Log In' %>
+<div class='container'>
+    <div class='form'>
+        <h1>Log In</h1>
+        <ul>
+        <%= form_for :session, url: login_path do |u| %>
+        
+        <li>    
+            <h3>Email</h3>
+            <%= u.text_field :email %>
+        </li>
+        
+        <li>
+            <h3>Password</h3>
+            <%= u.password_field :password %>
+        </li>
+        
+        <li>    
+            <%= u.submit 'Sign In' %>
+        </li>
+        
+        <% end %>
+        </ul>
+    </div>
+</div>    
+

@@ -38,7 +38,12 @@
             
             <li>
                 <h3>Password</h3>
-                <%= u.password_field :password_digest %>
+                <%= u.password_field :password %>
+            </li>
+            
+            <li>
+                <h3>Password Confirmation</h3>
+                <%= u.password_field :password_confirmation %>
             </li>
             
             <li>

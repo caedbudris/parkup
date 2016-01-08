@@ -14,14 +14,19 @@
             <li class='inactive'><%= link_to 'Discussion', discussion_path %></li>
             <li class='inactive'><%= link_to 'Podcasts', '#' %></li>
             <li class='inactive'><%= link_to 'Blogs', '#' %></li>
-            <li class='inactive'><%= link_to 'Forum', '#' %></li>
+            <li class='inactive'><%= link_to 'Forums', '#' %></li>
         </ul>
     </div>
 </div>
 <div class="bottom">
     <div class="contain">
-        <%= link_to 'Log In', '#', class: 'log' %>
-        <%= link_to 'Sign Up', new_user_path, class: 'sign' %>
+        <% if logged_in? %>    
+            <%= link_to 'Log Out', logout_path, method: :delete, class: 'log' %>
+            <%= link_to 'Profile', current_user, class: 'sign' %>
+        <% else %>
+            <%= link_to 'Log In', login_path, class: 'log' %>
+            <%= link_to 'Sign Up', new_user_path, class: 'sign' %>
+        <% end %>
         <%= link_to '+', new_post_path, class:'postSmall' %>
         <%= link_to '+ New Post', new_post_path, class: 'post' %>
     </div>
