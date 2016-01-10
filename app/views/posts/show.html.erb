@@ -34,6 +34,7 @@
             <% end %>
         </div>
         
+        <% if logged_in? %>
         <div class='form'>
             <h3>Make a Comment</h3>
             <%= form_for @comment do |c| %>
@@ -42,5 +43,7 @@
                 <%= c.submit %>
             <% end %>
         </div>
+        <% end %>
+        
     </div>
 </div>

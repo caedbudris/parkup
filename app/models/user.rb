@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
     has_secure_password
     
     mount_uploader :picture, PictureUploader
+    
+    has_many :posts
+    has_many :comments
 end

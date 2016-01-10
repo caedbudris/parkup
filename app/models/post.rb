@@ -4,6 +4,6 @@ class Post < ActiveRecord::Base
     validates :link, format: { with: VALID_LINK_REGEX }, allow_nil: true
     validates :category, presence: true
     
-    has_many :comments
+    has_many :comments, dependent: :destroy
     
 end
