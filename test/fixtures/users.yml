@@ -1,12 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   name: 'CoasterBoy'
   email: 'user@example.com'
   park: 'Six Flags'
   password_digest: 'password'
 
 two:
+  id: 2
   name: 'CoasterFool'
   email: 'fool@rollercoasters.com'
   park: 'Cedar Point'
