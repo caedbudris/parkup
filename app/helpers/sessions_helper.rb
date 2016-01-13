@@ -9,7 +9,7 @@ module SessionsHelper
     end
     
     def logged_in?
-        !session.nil?
+        !session[:user_id].nil?
     end
     
     def current_user?(user)
