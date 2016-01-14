@@ -19,8 +19,9 @@ class CommentsController < ApplicationController
     private
     
         def correct_user
-            @user = User.find(@comment.user_id)
-            redirect_to root_path unless current_user?(@user)
+            comment = Comment.find(params[:id])
+            user = User.find(comment.user_id)
+            redirect_to root_path unless current_user?(user)
         end
         
         def logged_in_user
